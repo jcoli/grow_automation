@@ -56,7 +56,7 @@ void checkPosition(){
   Serial.println("checkPosition");
   encoder1.tick();
   encoder2.tick(); 
-}
+} 
 
 void check_button(){
     if ((millis() - encoderDelay > 200)) {

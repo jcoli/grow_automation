@@ -68,6 +68,9 @@ STM32F407VET6 - Grown
 #define SDA1    PB7
 #define SCL1    PB6
 #define SDA2    PC9
-#define SCL2    PA8
+#define SCL2    PA8 
+
+//
+#define BUZZER_PIN PB0
 
 #endif
