@@ -10,8 +10,14 @@ STM32F407VET6 - Grown
 
 #include <Arduino.h>
 
-void spi_memory_begin();
-void spi_memory_write(String strAddr, String inputString);
-void spimemory_read(String strAddr, String outputString);
+void flash_begin();
+void flash_write_page(uint32_t addr,uint8_t *buf);
+void flash_write(uint32_t addr_start,uint8_t *buf, uint16_t n);
+void flash_read(uint8_t *buf, uint32_t addr);
+void flashwrite_test();
+void flashwrite_test6();
+void flashread_test();
+void flashread_test6();
+void flash_erase();
 
 #endif

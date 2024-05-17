@@ -94,7 +94,9 @@ void setup() {
   call_list_net();
   delay(5000);
   buttons_begin();
-  // spi_memory_begin();
+  flash_begin();
+  // flashwrite_test6();
+  flashread_test6();
   
   delay(1000); 
   tft_page = 0;
