@@ -10,6 +10,8 @@ STM32F407VET6 - Digital ECU Simulator
 
 /* structures internal */
 
+#include <Arduino.h>
+
 typedef struct _out_ana out_ana;
 struct _out_ana
 {
