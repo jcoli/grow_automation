@@ -52,27 +52,27 @@ void draw_footpage(){
     tft.setFreeFont(FF5); 
     tft.setTextSize(0);
     //   PC Connection
-    tft.setCursor(250,315);
+    tft.setCursor(215,315);
     tft.print("Hum");
-    tft.drawCircle(240,310, 6, TFT_LIGHTGREY);
+    tft.drawCircle(205,310, 6, TFT_LIGHTGREY);
     if (con_en){
         if (live){
-            tft.fillCircle(240,310, 4, TFT_RED);
+            tft.fillCircle(205,310, 4, TFT_RED);
         }else{
-            tft.fillCircle(240,310, 4, TFT_DARKGREY);
+            tft.fillCircle(205,310, 4, TFT_DARKGREY);
         }
         con_en = false;
     }    
     // Injector Connection
-    tft.setCursor(295,315);  
+    tft.setCursor(275,315);  
     tft.print("Desu"); 
-    tft.drawCircle(285,310, 6, TFT_LIGHTGREY);
+    tft.drawCircle(265,310, 6, TFT_LIGHTGREY);
     if (con_en_1){
         // Serial.println("live1");
         if (live_1){
-            tft.fillCircle(285,310, 4, TFT_RED);   
+            tft.fillCircle(265,310, 4, TFT_RED);   
         }else{
-            tft.fillCircle(285,310, 4, TFT_DARKGREY);   
+            tft.fillCircle(265,310, 4, TFT_DARKGREY);   
         }
         con_en_1 = false;
     }            
@@ -98,9 +98,9 @@ void draw_footpage(){
     tft.print("WiFi");
     tft.drawCircle(10,310, 6, TFT_LIGHTGREY);
       
-    tft.setCursor(85,315);
+    tft.setCursor(95,315);
     tft.print("BT");
-    tft.drawCircle(75,310, 6, TFT_LIGHTGREY);
+    tft.drawCircle(85,310, 6, TFT_LIGHTGREY);
     
     tft.setCursor(150,315);
     tft.print("USB");
@@ -114,7 +114,7 @@ void draw_footpage(){
         //     tft.fillCircle(10,310, 4, TFT_DARKGREY);
         // }
         // if (out_dig_i[1].value){
-            tft.fillCircle(75,310, 4, TFT_RED);  
+            tft.fillCircle(85,310, 4, TFT_RED);  
         // }else{
         //     tft.fillCircle(75,310, 4, TFT_DARKGREY);  
         // }   

@@ -85,18 +85,18 @@ void setup() {
   analogReadResolution(12);
   display_begin();
   drawSplash();
-  delay(5000);
+  delay(1000);
   
   init_bt();
   delay(500);
   init_wifi();
-  delay(5000);
+  delay(3000);
   call_list_net();
   delay(5000);
   buttons_begin();
   // spi_memory_begin();
   
-  delay(2000); 
+  delay(1000); 
   tft_page = 0;
   ch_page = true;
   draw_tab = 0;
