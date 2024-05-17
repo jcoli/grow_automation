@@ -62,4 +62,43 @@ int enc1newPos  = 0;
 int enc2oldPos  = 0;
 int enc2newPos  = 0;
 
+
+bool init_comm = true;
+bool live = false;
+bool bcomm = false;
+bool live_1 = false;
+bool bcomm_1 = false;
+int conn_timeout = 20;
+int livebit_tmp = 0;
+int livebit_inj_tmp = 0;
+int conn_timeout_1 = 10;
+int livebit_tmp_1 = 0;
+int livebit_inj_tmp_1 = 0;
+bool injectionEnable = false;
+bool inj_en = false;
+bool con_en = false;
+bool inj_en_1 = false;
+bool con_en_1 = false;
+bool rpm_en = false;
+bool out = false;
+bool ch_page = true;
+bool ch_page_ana = false;
+int tft_page = 0;
+int tft_page_ant = 0;
+int tft_sub_page = 0;
+int tft_sub_page_ant = 0;
+int item_to_ch = 0;
+int item_out_dig_select = 0;
+int item_out_ana_select = 0;
+int last_item_ana_select = 0;
+int last_item_out_select =0;
+float temp_ana_value = 1.00;
+int pot = 0;
+
+bool draw_test = true;
+bool refresh_page = false;
+int draw_tab = 0;
+int draw_page = 0;
+
+
 #endif

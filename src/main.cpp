@@ -27,6 +27,8 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 #include "buttons.h"
 #include "eprom.h"
 
+#include "disp_page0.h"
+
 #define CALX_TEMP 25
 #define V25       760
 #define AVG_SLOPE 2500
@@ -92,9 +94,15 @@ void setup() {
   call_list_net();
   delay(5000);
   buttons_begin();
-  spi_memory_begin();
+  // spi_memory_begin();
   
   delay(2000); 
+  tft_page = 0;
+  ch_page = true;
+  draw_tab = 0;
+  draw_page = 0;
+  draw_page0();
+  Serial.println("page0"); 
   
 }
 
