@@ -100,5 +100,8 @@ bool refresh_page = false;
 int draw_tab = 0;
 int draw_page = 0;
 
+float VRef = 0.00;
+float intTemp = 10.00;
+
 
 #endif

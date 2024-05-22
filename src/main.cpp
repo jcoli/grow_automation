@@ -70,11 +70,6 @@ void serialEventRun(void)
 }
 
 
-int32_t VRef;
-float intTemp;
-
-
-
 // char version[8] = "1.0a";
 
 void setup() {
@@ -133,6 +128,12 @@ void loop() {
     // HC05_SERIAL.print("AT+NAME");
     //  delay(2000);
     flashread_test6();
+    VRef = readVref();
+    intTemp = readTempSensor(VRef);
+    ch_page = true;
+    draw_tab = 0;
+    draw_page = 0;
+    draw_page0();
     
    
     Serial.println("loop"); 

@@ -44,6 +44,9 @@ extern int draw_page;
 extern  TFT_eSPI tft;
 // TFT_eSPI tft = TFT_eSPI(); 
 
+extern float VRef;
+extern float intTemp;
+
 
 void draw_page0(){
   Serial.println("Draw 0");
@@ -115,8 +118,20 @@ void draw_page0(){
     if (draw_page == 0){  
         
         tft.setFreeFont(FMB9);
-        tft.setTextColor(TFT_WHITE); 
+        tft.setTextColor(TFT_YELLOW); 
         tft.setTextSize(0);
+
+        tft.setCursor(5,60);
+        tft.print("Temp CPU:");
+        tft.setCursor(5,80);
+        tft.print("Tensao CPU:");
+
+        tft.setTextColor(TFT_SKYBLUE);
+
+        tft.setCursor(150,60);
+        tft.print(intTemp,2);
+        tft.setCursor(160,80);
+        tft.print(VRef/1000);
         
         inj_en = true;
         out=true;
