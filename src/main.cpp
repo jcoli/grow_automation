@@ -140,9 +140,9 @@ void loop() {
    }
   if (millis() - loopDelay_analog > 400){ 
     loopDelay_analog = millis();
-    digitalWrite(LED1, HIGH);
+    digitalWrite(LED1, HIGH); 
     digitalWrite(LED2, LOW);
-    delay(100);
+    delay(100); 
     digitalWrite(LED1, LOW);
     digitalWrite(LED2, HIGH);
    
