@@ -1,0 +1,92 @@
+Date : 2024-05-17 17:47:19
+Directory : /home/jcoli/develop/Platformio/projects/grow_1/src
+Total : 62 files,  -11224 codes, -1481 comments, -68 blanks, all -12773 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| XML      |          2 |         -6 |          0 |         -1 |         -7 |
+| C++      |         60 |    -11,218 |     -1,481 |        -67 |    -12,766 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                     | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                        |         62 |    -11,224 |     -1,481 |        -68 |    -12,773 |
+| . (Files)                                                                                |         16 |        972 |        221 |        289 |      1,482 |
+| ..                                                                                       |         46 |    -12,196 |     -1,702 |       -357 |    -14,255 |
+| ../include                                                                               |         46 |    -12,196 |     -1,702 |       -357 |    -14,255 |
+| ../include (Files)                                                                       |         21 |       -807 |       -210 |       -216 |     -1,233 |
+| ../include/icons                                                                         |         25 |    -11,389 |     -1,492 |       -141 |    -13,022 |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                 | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /home/jcoli/develop/Platformio/projects/grow_1/include/Free_Fonts.h                      | C++      |       -264 |        -55 |        -61 |       -380 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/buttons.h                         | C++      |         -6 |         -6 |         -5 |        -17 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/comm_bt.h                         | C++      |         -5 |         -6 |         -4 |        -15 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/comm_wifi.h                       | C++      |         -8 |         -6 |         -5 |        -19 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/defines.h                         | C++      |        -31 |         -7 |        -11 |        -49 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/disp_footpage.h                   | C++      |         -4 |         -7 |         -5 |        -16 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/disp_page0.h                      | C++      |         -4 |         -7 |         -5 |        -16 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/display.h                         | C++      |         -5 |         -6 |         -4 |        -15 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/display_navigation.h              | C++      |         -4 |         -6 |         -4 |        -14 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/eprom.h                           | C++      |        -13 |         -6 |         -4 |        -23 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/alert-decagram-outline-25.h | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/arduino.h                   | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/bell-alert.h                | C++      |        -18 |        -61 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/bx+door+open.h              | C++      |        -12 |        -52 |         -6 |        -70 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/bxs+door+open.h             | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/cat.h                       | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/door+closed.h               | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/dryer.h                     | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/fan-13.h                    | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/fan-2.h                     | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/fan-alert.svg               | XML      |         -1 |          0 |          0 |         -1 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/fan-alert.xml               | XML      |         -5 |          0 |         -1 |         -6 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/fan-custom.h                | C++      |        -14 |        -50 |         -6 |        -70 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/fan.h                       | C++      |     -1,029 |       -282 |         -6 |     -1,317 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/heat-wave.h                 | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/home-assistant.h            | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/images.h                    | C++      |     -9,931 |          0 |         -8 |     -9,939 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/logo.h                      | C++      |        -28 |        -41 |         -6 |        -75 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/snowflake.h                 | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/thermometer-alert.h         | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/thermometer.h               | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/tumble-dryer.h              | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/vin3.h                      | C++      |        -50 |        -53 |         -6 |       -109 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/wi-fi-1.h                   | C++      |        -16 |        -53 |         -6 |        -75 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/icons/wi-fi.h                     | C++      |        -19 |        -60 |         -6 |        -85 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/input_analog_control.h            | C++      |         -3 |         -6 |         -4 |        -13 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/input_digital_control.h           | C++      |         -3 |         -6 |         -5 |        -14 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/io_defines.h                      | C++      |        -29 |        -33 |        -14 |        -76 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/mqtt_controll.h                   | C++      |         -6 |         -6 |         -5 |        -17 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/output_digital_control.h          | C++      |         -4 |         -6 |         -4 |        -14 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/pitches.h                         | C++      |        -90 |         -6 |         -1 |        -97 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/program.h                         | C++      |         -3 |         -6 |         -5 |        -14 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/sounds.h                          | C++      |         -3 |         -6 |         -4 |        -13 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/structures.h                      | C++      |       -232 |        -11 |        -45 |       -288 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/tools.h                           | C++      |         -8 |         -6 |         -5 |        -19 |
+| /home/jcoli/develop/Platformio/projects/grow_1/include/variables.h                       | C++      |        -82 |         -6 |        -16 |       -104 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/buttons.cpp                           | C++      |         48 |          6 |         14 |         68 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/comm_bt.cpp                           | C++      |         34 |          7 |         15 |         56 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/comm_wifi.cpp                         | C++      |         78 |         18 |         25 |        121 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/disp_footpage.cpp                     | C++      |         84 |         28 |         19 |        131 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/disp_page0.cpp                        | C++      |        100 |          8 |         23 |        131 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/display.cpp                           | C++      |         33 |          6 |         21 |         60 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/display_navigation.cpp                | C++      |         78 |         22 |          7 |        107 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/eprom.cpp                             | C++      |        147 |         46 |         40 |        233 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/input_analog_control.cpp              | C++      |         19 |          6 |         14 |         39 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/input_digital_control.cpp             | C++      |         12 |          9 |         13 |         34 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/main.cpp                              | C++      |        165 |         32 |         43 |        240 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/mqtt_controll.cpp                     | C++      |         19 |          8 |         18 |         45 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/output_digital_control.cpp            | C++      |         10 |          6 |          7 |         23 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/program.cpp                           | C++      |         12 |          6 |         12 |         30 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/sounds.cpp                            | C++      |         58 |          6 |         10 |         74 |
+| /home/jcoli/develop/Platformio/projects/grow_1/src/tools.cpp                             | C++      |         75 |          7 |          8 |         90 |
+| Total                                                                                    |          |    -11,224 |     -1,481 |        -68 |    -12,773 |
++------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

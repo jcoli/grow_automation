@@ -19,11 +19,6 @@ STM32F407VET6 - Grown
 
 void io_input_begin();
 
-
-// #define NUM_BUTTONS 3
-// const uint8_t BUTTON_PINS[NUM_BUTTONS] = {BT_POWER, BT_PROGRAM, BT_CYCLE};
-// Bounce * buttons = new Bounce[NUM_BUTTONS];
-
 void io_input_begin(){
     
 

@@ -6,7 +6,7 @@ winbondFlashSPI mem;
 
 SPIClass spiToUse(2); // int represents SPI port number
 //#define SS  PA4
-#define SS  PB12
+#define SS  PB14
 
 void setup()
 {

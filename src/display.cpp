@@ -26,6 +26,7 @@ extern bool wifi_connected;
 
 
 void display_begin(){
+    Serial.println("display begin"); 
     tft.setRotation(3);
     tft.init();
  

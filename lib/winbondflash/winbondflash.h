@@ -23,7 +23,7 @@
 #define _W25Q64  winbondFlashClass::W25Q64
 #define _W25Q128 winbondFlashClass::W25Q128
 
-#define SS  PA15 //CS pin
+#define SS  PB14 //CS pin
 
 class winbondFlashClass {
 public:  

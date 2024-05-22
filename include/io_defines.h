@@ -72,5 +72,7 @@ STM32F407VET6 - Grown
 
 //
 #define BUZZER_PIN PB0
+#define LED1    PF9
+#define LED2    PF10
 
 #endif

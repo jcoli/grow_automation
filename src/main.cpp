@@ -82,7 +82,10 @@ void setup() {
   Serial.begin(115200); //PC
   WIFI_SERIAL.begin(38400); //Sim
   HC05_SERIAL.begin(38400); //Slave
+  Serial.println("page0"); 
+
   analogReadResolution(12);
+  delay(5000);
   display_begin();
   drawSplash();
   delay(1000);
@@ -105,7 +108,10 @@ void setup() {
   draw_page = 0;
   draw_page0();
   Serial.println("page0"); 
-  
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  digitalWrite(LED1, HIGH);
+  digitalWrite(LED2, HIGH);
 }
 
 void loop() {
@@ -116,16 +122,30 @@ void loop() {
     serialEvent3();
 
   }
-  if (millis() - loopDelay > 20000){
+  if (millis() - loopDelay > 50000){
     loopDelay = millis();
     call_list_net();
+    delay(5000);
     init_bt();
+    // init_wifi();
     // WIFI_SERIAL.print("90,send,testwifi,4,#");
     // HC05_SERIAL.println("90,0,0,0,#");
     // HC05_SERIAL.print("AT+NAME");
-    // Serial.println("c,stm32,s3,4,#"); 
-   }
+    //  delay(2000);
+    flashread_test6();
+    
    
+    Serial.println("loop"); 
+   }
+  if (millis() - loopDelay_analog > 400){ 
+    loopDelay_analog = millis();
+    digitalWrite(LED1, HIGH);
+    digitalWrite(LED2, LOW);
+    delay(100);
+    digitalWrite(LED1, LOW);
+    digitalWrite(LED2, HIGH);
+   
+  } 
   
 }
 

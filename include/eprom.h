@@ -18,6 +18,6 @@ void flashwrite_test();
 void flashwrite_test6();
 void flashread_test();
 void flashread_test6();
-void flash_erase();
+void flash_erase(); 
 
 #endif

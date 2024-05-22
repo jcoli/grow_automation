@@ -41,7 +41,7 @@ void flash_begin() {
      Serial.println("OK");
      Serial.println(mem.readPartID());
      Serial.println(mem.readUniqueID());
-     Serial.println(mem.readManufacturer());
+     Serial.println(mem.readManufacturer()); 
      Serial.println(mem.readSR());
   }
   else
@@ -206,15 +206,15 @@ void flashread_test6(){
     uint8_t *buf = new uint8_t[len];
     while(mem.busy());
     mem.read(addr,buf,len);
-    // Serial.println(("read 1"));
+    Serial.println(("read 1"));
     int i = 0;
     int k = 0;
     while(k != '\n' && i<len)   //Read until null character
     {    
       k=(char)buf[i];
       data[i]=k;
-    //   Serial.print((char)data[i]);
-    //   Serial.println(i);
+      // Serial.print((char)data[i]);
+      // Serial.println(i);
       i++;
     }
     Serial.print(("read: "));
@@ -222,9 +222,9 @@ void flashread_test6(){
     // {
     //   Serial.print((char)buf[i]);
     // }
-    Serial.println("");
+    // Serial.println("");
     Serial.println(String(data));
-    Serial.println(("OK"));
+    // Serial.println(("OK"));
 
     delete [] buf;
 

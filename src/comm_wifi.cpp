@@ -52,7 +52,7 @@ void call_list_net(){
 
 void on_wifi_comm(){
     // Serial.println("on_wifi_comm");
-    // Serial.println(line1);
+    // Serial.println(line1); 
 
     split_msg_5(line1);
 
@@ -106,7 +106,7 @@ void listNetworks(){
       
       delay(500);
       for (int i = 0; i<list_size; i++ ){
-          Serial.println("SSID: "+Ssid[0][i]+" RSSI: "+Ssid[1][i]);
+          // Serial.println("SSID: "+Ssid[0][i]+" RSSI: "+Ssid[1][i]);
           HC05_SERIAL.println("SSID: "+Ssid[0][i]+" RSSI: "+Ssid[1][i]); 
       }
       HC05_SERIAL.println("4,1,0,0,#");
