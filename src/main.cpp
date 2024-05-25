@@ -9,6 +9,7 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 #include "stm32yyxx_ll_adc.h"
 #include <SPI.h>
 #include <TFT_eSPI.h>
+#include <STM32RTC.h>
 
 #include "display.h"
 #include "defines.h"
@@ -28,6 +29,8 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 #include "eprom.h"
 
 #include "disp_page0.h"
+
+STM32RTC& rtc = STM32RTC::getInstance();
 
 #define CALX_TEMP 25
 #define V25       760
@@ -78,7 +81,19 @@ void setup() {
   WIFI_SERIAL.begin(38400); //Sim
   HC05_SERIAL.begin(38400); //Slave
   Serial.println("page0"); 
+  rtc.setClockSource(STM32RTC::LSE_CLOCK);
+  rtc.begin();
+  if (!rtc.isTimeSet()) {
+    rtc.setHours(19);
+    rtc.setMinutes(26);
+    rtc.setSeconds(0);
 
+    // Set the date
+    rtc.setWeekDay(4);
+    rtc.setDay(22);
+    rtc.setMonth(5);
+    rtc.setYear(24);
+  }
   analogReadResolution(12);
   delay(5000);
   display_begin();
@@ -97,6 +112,7 @@ void setup() {
   flashread_test6();
   
   delay(1000); 
+  analog_input_begin();
   tft_page = 0;
   ch_page = true;
   draw_tab = 0;
@@ -127,12 +143,15 @@ void loop() {
     // HC05_SERIAL.println("90,0,0,0,#");
     // HC05_SERIAL.print("AT+NAME");
     //  delay(2000);
+
     flashread_test6();
     VRef = readVref();
     intTemp = readTempSensor(VRef);
     ch_page = true;
     draw_tab = 0;
     draw_page = 0;
+    rtc.getDate(&weekDay, &day, &month, &year);
+    rtc.getTime(&hours, &minutes, &seconds, &subSec);
     draw_page0();
     
    

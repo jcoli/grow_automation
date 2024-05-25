@@ -19,6 +19,15 @@ void draw_page0();
 void draw_menu0();
 
 
+extern uint32_t subSec;
+extern byte seconds;
+extern byte minutes;
+extern byte hours;
+extern byte weekDay;
+extern byte day;
+extern byte month;
+extern byte year;
+
 extern int language;
 
 extern bool ch_page;
@@ -125,6 +134,13 @@ void draw_page0(){
         tft.print("Temp CPU:");
         tft.setCursor(5,80);
         tft.print("Tensao CPU:");
+
+        tft.setTextColor(TFT_RED); 
+        tft.setCursor(320,60);
+        tft.printf("%02d/%02d/%02d ", day, month, year);
+        tft.setCursor(420,60);
+        tft.printf("%02d:%02d\n", hours, minutes);
+
 
         tft.setTextColor(TFT_SKYBLUE);
 

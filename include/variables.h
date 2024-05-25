@@ -10,6 +10,15 @@ STM32F407VET6 - Grown
 #define __VARIABLES_H__
 #include <Arduino.h>
 
+uint32_t subSec;
+byte seconds;
+byte minutes;
+byte hours;
+byte weekDay ;
+byte day;
+byte month;
+byte year;
+
 float tempIn = 0;
 float tempOut = 0;
 float tempCpu = 0;

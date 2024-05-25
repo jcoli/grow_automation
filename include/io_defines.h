@@ -23,6 +23,14 @@ STM32F407VET6 - Grown
 // #define EP_DI   PB5
 // #define EP_CLK  PB3
 
+//I2C1
+// #define SDA1 PB9
+// #define SCL1 PB8
+
+//I2C2
+// #define SDA2 PF0
+// #define SCL2 PF1
+
 //WiFi
 // WIFI_SERIAL(PD6, PD5);
 
