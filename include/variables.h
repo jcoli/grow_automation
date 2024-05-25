@@ -109,8 +109,30 @@ bool refresh_page = false;
 int draw_tab = 0;
 int draw_page = 0;
 
+//analogs
+const float beta = 4200.0;
+const float r0 = 100000.0;
+const float t0 = 273.0 + 25.0;
+const float rx = r0 * exp(-beta/t0);
+const int nAmostras = 7;
+const float vcc = 3.3;
+const float R = 85000.0;
+
 float VRef = 0.00;
 float intTemp = 10.00;
+float ens_aqi = 0.00;
+float ens_tvoc = 0.00;
+float ens_eco2 = 0.00;
+float aht_hum = 0.00;
+float aht_temp = 0.00;
+float bme1_temp = 0.00;
+float bme1_hum = 0.00;
+float bme1_press = 0.00;
+float bme2_temp = 0.00;
+float bme2_hum = 0.00;
+float bme2_press = 0.00;
+
+
 
 
 #endif
