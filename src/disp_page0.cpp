@@ -50,6 +50,19 @@ extern bool out;
 extern int draw_tab;
 extern int draw_page;
 
+extern float ens_aqi;
+extern float ens_tvoc;
+extern float ens_eco2;
+extern float aht_hum;
+extern float aht_temp;
+extern float bme1_temp;
+extern float bme1_hum;
+extern float bme1_press;
+extern float bme2_temp;
+extern float bme2_hum;
+extern float bme2_press;
+
+
 extern  TFT_eSPI tft;
 // TFT_eSPI tft = TFT_eSPI(); 
 
@@ -134,6 +147,21 @@ void draw_page0(){
         tft.print("Temp CPU:");
         tft.setCursor(5,80);
         tft.print("Tensao CPU:");
+        tft.setCursor(5,100);
+        tft.print("Temp bme1:");
+        tft.setCursor(5,120);
+        tft.print("Temp bme2:");
+        tft.setCursor(5,140);
+        tft.print("Temp aht:");
+
+        tft.setCursor(230,100);
+        tft.print("Hum bme1:");
+        tft.setCursor(230,120);
+        tft.print("Hum bme2:");
+        tft.setCursor(230,140);
+        tft.print("Hum aht:");
+
+
 
         tft.setTextColor(TFT_RED); 
         tft.setCursor(320,60);
@@ -144,10 +172,29 @@ void draw_page0(){
 
         tft.setTextColor(TFT_SKYBLUE);
 
-        tft.setCursor(150,60);
+        tft.setCursor(130,60);
         tft.print(intTemp,2);
-        tft.setCursor(160,80);
+        tft.setCursor(190,60);
+        tft.println("°C");
+        tft.setCursor(140,80);
         tft.print(VRef/1000);
+        tft.setCursor(190,80);
+        tft.println("V");
+
+        tft.setCursor(140,100);
+        tft.print(bme1_temp,2);
+        tft.setCursor(140,120);
+        tft.print(bme2_temp,2);
+        tft.setCursor(140,140);
+        tft.print(aht_temp,2);
+
+        tft.setCursor(365,100);
+        tft.print(bme1_hum,2);
+        tft.setCursor(365,120);
+        tft.print(bme2_hum,2);
+        tft.setCursor(365,140);
+        tft.print(aht_hum,2);
+
         
         inj_en = true;
         out=true;

@@ -58,6 +58,10 @@ void analog_input_begin(){
     status2 = bme2.begin(0x76, &Wire);  
     //The 7-bit device address is 111011x. The 6 MSB bits are fixed. The last bit is changeable by SDO value and can be changed during operation. 
     //Connecting SDO to GND results in slave address 1110110 (0x76); connection it to VDDIOresults in slaveaddress 1110111 (0x77)
+    //The I²C interface uses the following pins:
+    //SCK:serial clock (SCL) 
+    //SDI:data (SDA)
+    //SDO:Slave address LSB (GND = ‘0’, VDDIO= ‘1’)
 
     if (!status1) {
         Serial.println("Could not find a valid BME280 sensor, check wiring, address, sensor ID!");
