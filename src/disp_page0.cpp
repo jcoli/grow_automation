@@ -153,6 +153,8 @@ void draw_page0(){
         tft.print("Temp bme2:");
         tft.setCursor(5,140);
         tft.print("Temp aht:");
+        tft.setCursor(5,160);
+        tft.print("CO2:");
 
         tft.setCursor(230,100);
         tft.print("Hum bme1:");
@@ -160,6 +162,8 @@ void draw_page0(){
         tft.print("Hum bme2:");
         tft.setCursor(230,140);
         tft.print("Hum aht:");
+        tft.setCursor(230,160);
+        tft.print("TVOC:");
 
 
 
@@ -187,6 +191,8 @@ void draw_page0(){
         tft.print(bme2_temp,2);
         tft.setCursor(140,140);
         tft.print(aht_temp,2);
+        tft.setCursor(140,160);
+        tft.print(ens_eco2,2);
 
         tft.setCursor(365,100);
         tft.print(bme1_hum,2);
@@ -194,6 +200,8 @@ void draw_page0(){
         tft.print(bme2_hum,2);
         tft.setCursor(365,140);
         tft.print(aht_hum,2);
+        tft.setCursor(365,160);
+        tft.print(ens_tvoc,2);
 
         
         inj_en = true;

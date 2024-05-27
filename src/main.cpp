@@ -111,7 +111,7 @@ void setup() {
   // flashwrite_test6();
   flashread_test6();
   
-  delay(1000); 
+  delay(4000); 
   analog_input_begin();
   tft_page = 0;
   ch_page = true;
@@ -133,17 +133,19 @@ void loop() {
     serialEvent3();
 
   }
-  if (millis() - loopDelay > 50000){
+  if (millis() - loopDelay > 60000){
     loopDelay = millis();
+    
     call_list_net();
     delay(5000);
     init_bt();
+    read_analog();
     // init_wifi();
     // WIFI_SERIAL.print("90,send,testwifi,4,#");
     // HC05_SERIAL.println("90,0,0,0,#");
     // HC05_SERIAL.print("AT+NAME");
-    //  delay(2000);
-
+    //  delay(2000);  
+    printValues();
     flashread_test6();
     VRef = readVref();
     intTemp = readTempSensor(VRef);
