@@ -15,7 +15,7 @@ STM32F407VET6 - Digital ECU Simulator
 #include "display_navigation.h"
 #include "disp_footpage.h"
 
-void draw_page0();
+void draw_page1();
 
 extern uint32_t subSec;
 extern byte seconds;
@@ -68,7 +68,7 @@ extern float VRef;
 extern float intTemp;
 
 
-void draw_page0(){
+void draw_page1(){
   Serial.println("Draw 0");
   if ((tft_page == 0) && (ch_page)){
 
@@ -101,21 +101,23 @@ void draw_page0(){
 
   
 
-    if (draw_tab == 0){
+    if (draw_tab == 1){
 
         tft.fillScreen(TFT_BLACK);
         
         tft.setFreeFont(FMB9); 
         tft.setTextSize(0);
-        tft.setTextColor(TFT_LIGHTBLUE);
-        tft.fillRoundRect(0,0,68,30, 5, TFT_LIGHTBLUE);
+        tft.setTextColor(TFT_LIGHTBLUE);        
+        tft.drawRoundRect(0,0,68,30, 5, TFT_SKYBLUE);
         tft.setCursor(5,18);
-        tft.setTextColor(TFT_BLACK);
         tft.println("Princ.");
-        tft.drawRoundRect(68,0,68,30, 5, TFT_SKYBLUE);
+        
+        tft.fillRoundRect(68,0,68,30, 5, TFT_LIGHTBLUE);
         tft.setCursor(73,18);
-        tft.setTextColor(TFT_LIGHTBLUE);
+        tft.setTextColor(TFT_BLACK);
         tft.println("Contr.");
+
+        tft.setTextColor(TFT_LIGHTBLUE); 
         tft.drawRoundRect(136,0,68,30, 5, TFT_SKYBLUE);
         tft.setCursor(141,18);
         tft.println("Ilum.");
@@ -135,10 +137,10 @@ void draw_page0(){
         
     }
 
-    if (draw_page == 0){  
+    if (draw_page == 1){  
         
         tft.setFreeFont(FMB9);
-        tft.setTextColor(TFT_YELLOW); 
+        tft.setTextColor(TFT_RED); 
         tft.setTextSize(0);
 
         tft.setCursor(5,60);

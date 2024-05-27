@@ -44,6 +44,6 @@ static const char processor[] = "STM32F407VET6";
 #define LOCAL_SSID "Area51"
 #define LOCAL_PASS "shady6565"
 
-#define NUM_BUTTONS 15
+#define NUM_BUTTONS 17
 
 #endif

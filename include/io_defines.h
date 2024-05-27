@@ -40,37 +40,44 @@ STM32F407VET6 - Grown
 // #define BT_ST   PD11
 
 //Buttons
-#define BT_01   PE2
-#define BT_02   PE3
-#define BT_03   PE4
-#define BT_04   PE5
+#define BT_01   PE14
+#define BT_02   PE15
+#define BT_03   PE12
+#define BT_04   PE13
 
 //Switches
-#define SW_01   PC13
-#define SW_02   PE6
-#define SW_03   PC1
-#define SW_04   PC0
+#define SW_01   PE10
+#define SW_02   PE11
+#define SW_03   PE6
+#define SW_04   PE9
+
+//display buttons
+#define DP_01   PB10
+#define DP_02   PB11
+
 
 // Directional Buttons
-#define BD_0 PD7 //direcional >>
-#define BD_1 PD6 //direcional||
-#define BD_2 PD5 //direcional ^^
-#define BD_3 PD4 //direcional center
-#define BD_4 PD3 //direcional<<
+#define BD_0 PG1 //direcional >>
+#define BD_1 PE7 //direcional||
+#define BD_2 PG0 //direcional ^^
+#define BD_3 PF13 //direcional center
+#define BD_4 PF14//direcional<<
+
+//
 
 //Encoder 1
-#define ENC1_DT PE8
-#define ENC1_CLK PE7
-#define BTE_1  PE9
+#define ENC1_DT PE1
+#define ENC1_CLK PE0
+#define BTE_1  PE3
 
 //Encoder 1
-#define ENC2_DT PE10
-#define ENC2_CLK PE12
-#define BTE_2  PE11
+#define ENC2_DT PE2
+#define ENC2_CLK PE5
+#define BTE_2  PE4
 
 //Potentiometers
-#define PT_1  PE14
-#define PT_2  PE15
+#define PT_1  PC13
+#define PT_2  PE6
 
 //I2C
 #define SDA1    PB7
