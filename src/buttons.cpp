@@ -142,18 +142,17 @@ void check_button(){
           Serial.println("button14");
           break;    
         case 15:
-          tft_page--;
-          if (tft_page<0) tft_page=0;
-          change_tft_page();
-          Serial.println("button15");
-          break;    
-        case 16:
           tft_page++;
           if (tft_page>1) tft_page=1;
           change_tft_page();
           Serial.println("button16");
           break;    
-                
+        case 16:
+          tft_page--;
+          if (tft_page<0) tft_page=0;
+          change_tft_page();
+          Serial.println("button15");
+          break;    
       }
       
       

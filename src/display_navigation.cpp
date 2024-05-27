@@ -12,6 +12,7 @@ STM32F407VET6 - Digital ECU Simulator
 #include "io_defines.h"
 #include "display.h"
 #include "disp_page0.h"
+#include "disp_page1.h"
 
 void change_tft_page();
 
@@ -46,18 +47,20 @@ void change_tft_page(){
             case 0:
                 ch_page = true;
                 item_to_ch = 0;
-                if (!refresh_page) draw_tab = 0;
+                // if (!refresh_page)
+                draw_tab = 0;
                 draw_page = 0;
                 draw_page0();
-                // Serial.println("Draw 0");
+                Serial.println("Draw 0");
                 break;
             case 1:
                 ch_page = true;
                 item_to_ch = 0;
-                if (!refresh_page) draw_tab = 1;
+                // if (!refresh_page) 
+                draw_tab = 1;
                 draw_page = 1;
-                // draw_page1();
-                // Serial.println("Draw 1");
+                draw_page1();
+                Serial.println("Draw 1");
                 break;
             case 2:
                 ch_page = true;

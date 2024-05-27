@@ -69,7 +69,7 @@ extern float intTemp;
 
 
 void draw_page0(){
-  Serial.println("Draw 0");
+  Serial.println("Draw 0a");
   if ((tft_page == 0) && (ch_page)){
 
       int t_line = 16 + 28;
