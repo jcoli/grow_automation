@@ -110,9 +110,14 @@ void setup() {
   flash_begin();
   // flashwrite_test6();
   flashread_test6();
-  
+   
   delay(4000); 
   analog_input_begin();
+  rtc.getDate(&weekDay, &day, &month, &year);
+  rtc.getTime(&hours, &minutes, &seconds, &subSec);
+  read_analog();
+  VRef = readVref();
+  intTemp = readTempSensor(VRef);
   tft_page = 0;
   ch_page = true;
   draw_tab = 0;
@@ -135,10 +140,12 @@ void loop() {
   }
   if (millis() - loopDelay > 60000){
     loopDelay = millis();
+    rtc.getDate(&weekDay, &day, &month, &year);
+    rtc.getTime(&hours, &minutes, &seconds, &subSec);
     
-    call_list_net();
-    delay(5000);
-    init_bt();
+    // call_list_net();
+    // delay(5000);
+    // init_bt();
     read_analog();
     // init_wifi();
     // WIFI_SERIAL.print("90,send,testwifi,4,#");
@@ -152,12 +159,8 @@ void loop() {
     ch_page = true;
     draw_tab = 0;
     draw_page = 0;
-    rtc.getDate(&weekDay, &day, &month, &year);
-    rtc.getTime(&hours, &minutes, &seconds, &subSec);
     draw_page0();
-    
-   
-    Serial.println("loop"); 
+    // Serial.println("loop"); 
    }
   if (millis() - loopDelay_analog > 400){ 
     loopDelay_analog = millis();

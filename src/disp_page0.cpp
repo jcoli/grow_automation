@@ -120,7 +120,7 @@ void draw_page0(){
         tft.println("Contr.");
         tft.drawRoundRect(136,0,68,30, 5, TFT_SKYBLUE);
         tft.setCursor(141,18);
-        tft.println("Ilum");
+        tft.println("Ilum.");
         tft.drawRoundRect(204,0,68,30, 5, TFT_SKYBLUE);
         tft.setCursor(209,18);
         tft.println("Comm.");
@@ -185,22 +185,22 @@ void draw_page0(){
         tft.setCursor(190,80);
         tft.println("V");
 
-        tft.setCursor(140,100);
+        tft.setCursor(130,100);
         tft.print(bme1_temp,2);
         tft.setCursor(140,120);
         tft.print(bme2_temp,2);
-        tft.setCursor(140,140);
+        tft.setCursor(130,140);
         tft.print(aht_temp,2);
-        tft.setCursor(140,160);
+        tft.setCursor(120,160);
         tft.print(ens_eco2,2);
 
-        tft.setCursor(365,100);
+        tft.setCursor(355,100);
         tft.print(bme1_hum,2);
         tft.setCursor(365,120);
         tft.print(bme2_hum,2);
-        tft.setCursor(365,140);
+        tft.setCursor(355,140);
         tft.print(aht_hum,2);
-        tft.setCursor(365,160);
+        tft.setCursor(355,160);
         tft.print(ens_tvoc,2);
 
         

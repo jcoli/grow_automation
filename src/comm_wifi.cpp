@@ -107,9 +107,9 @@ void listNetworks(){
       delay(500);
       for (int i = 0; i<list_size; i++ ){
           // Serial.println("SSID: "+Ssid[0][i]+" RSSI: "+Ssid[1][i]);
-          HC05_SERIAL.println("SSID: "+Ssid[0][i]+" RSSI: "+Ssid[1][i]); 
+          // HC05_SERIAL.println("SSID: "+Ssid[0][i]+" RSSI: "+Ssid[1][i]); 
       }
-      HC05_SERIAL.println("4,1,0,0,#");
+      // HC05_SERIAL.println("4,1,0,0,#");
       Serial.println("===================");
       Serial.println("");
 }

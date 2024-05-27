@@ -55,42 +55,43 @@ void draw_footpage(){
     tft.setCursor(215,315);
     tft.print("Hum");
     tft.drawCircle(205,310, 6, TFT_LIGHTGREY);
-    if (con_en){
-        if (live){
+    if (live){
             tft.fillCircle(205,310, 4, TFT_RED);
         }else{
             tft.fillCircle(205,310, 4, TFT_DARKGREY);
         }
-        con_en = false;
-    }    
+    
     // Injector Connection
     tft.setCursor(275,315);  
     tft.print("Desu"); 
     tft.drawCircle(265,310, 6, TFT_LIGHTGREY);
-    if (con_en_1){
-        // Serial.println("live1");
-        if (live_1){
-            tft.fillCircle(265,310, 4, TFT_RED);   
-        }else{
-            tft.fillCircle(265,310, 4, TFT_DARKGREY);   
-        }
-        con_en_1 = false;
-    }            
+    if (live_1){
+        tft.fillCircle(265,310, 4, TFT_RED);   
+    }else{
+        tft.fillCircle(265,310, 4, TFT_DARKGREY);   
+    }
+    
+    tft.setCursor(345,315);  
+    tft.print("V1"); 
+    tft.drawCircle(335,310, 6, TFT_LIGHTGREY);
+    if (live_1){
+        tft.fillCircle(335,310, 4, TFT_RED);   
+    }else{
+        tft.fillCircle(335,310, 4, TFT_DARKGREY);   
+    }
+    
+    tft.setCursor(415,315);  
+    tft.print("V2"); 
+    tft.drawCircle(405,310, 6, TFT_LIGHTGREY);
+    if (live_1){
+        tft.fillCircle(405,310, 4, TFT_RED);   
+    }else{
+        tft.fillCircle(405,310, 4, TFT_DARKGREY);   
+    }
+           
     // Injector Status
     
-    tft.setCursor(340,315);  
-    if (inj_en){
-        if (injectionEnable){
-            tft.fillRect(340,300,380,320, TFT_BLACK);
-            tft.setTextColor(TFT_RED);
-            tft.print("Vent.Acionado"); 
-        }else{
-            tft.fillRect(340,300,380,320, TFT_BLACK);
-            tft.setTextColor(TFT_YELLOW);
-            tft.print("Vent.Parado   "); 
-        }
-        inj_en = false;
-    }
+    
 
     // lin 50, 30 and 15
     tft.setTextColor(TFT_SKYBLUE);
@@ -103,7 +104,7 @@ void draw_footpage(){
     tft.drawCircle(85,310, 6, TFT_LIGHTGREY);
     
     tft.setCursor(150,315);
-    tft.print("USB");
+    tft.print("Exau");
     tft.drawCircle(140,310, 6, TFT_LIGHTGREY);
     
 
