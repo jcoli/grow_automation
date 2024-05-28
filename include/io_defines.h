@@ -90,4 +90,10 @@ STM32F407VET6 - Grown
 #define LED1    PF9
 #define LED2    PF10
 
+#define LED01   PF2
+#define LED02   PF3
+#define LED03   PF4
+#define LED04   PF5
+#define LED05   PF6
+
 #endif
