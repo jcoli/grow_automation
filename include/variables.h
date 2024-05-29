@@ -131,8 +131,8 @@ float bme1_press = 0.00;
 float bme2_temp = 0.00;
 float bme2_hum = 0.00;
 float bme2_press = 0.00;
-float dht1_hum = 0.00;
-float dht1_temp = 0.00;
+float soil_hum = 0.00;
+float light_int = 0.00;
 
 float pot1 = 0;
 float pot2 = 0;

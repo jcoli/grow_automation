@@ -59,6 +59,8 @@ extern float bme1_press;
 extern float bme2_temp;
 extern float bme2_hum;
 extern float bme2_press;
+extern float light_int;
+extern float soil_hum;
 
 
 extern  TFT_eSPI tft;
@@ -155,6 +157,8 @@ void draw_page1(){
         tft.print("Temp aht:");
         tft.setCursor(5,160);
         tft.print("CO2:");
+        tft.setCursor(5,180);
+        tft.print("Soil:");
 
         tft.setCursor(230,100);
         tft.print("Hum bme1:");
@@ -164,6 +168,8 @@ void draw_page1(){
         tft.print("Hum aht:");
         tft.setCursor(230,160);
         tft.print("TVOC:");
+        tft.setCursor(230,180);
+        tft.print("Light:");
 
         tft.setTextColor(TFT_RED); 
         tft.setCursor(320,60);
@@ -190,6 +196,8 @@ void draw_page1(){
         tft.print(aht_temp,2);
         tft.setCursor(120,160);
         tft.print(ens_eco2,2);
+        tft.setCursor(120,180);
+        tft.print(soil_hum,2);
 
         tft.setCursor(355,100);
         tft.print(bme1_hum,2);
@@ -199,6 +207,8 @@ void draw_page1(){
         tft.print(aht_hum,2);
         tft.setCursor(355,160);
         tft.print(ens_tvoc,2);
+        tft.setCursor(355,180);
+        tft.print(light_int,2);
         
         inj_en = true;
         out=true;

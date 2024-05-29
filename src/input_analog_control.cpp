@@ -43,8 +43,8 @@ extern float bme1_press;
 extern float bme2_temp;
 extern float bme2_hum;
 extern float bme2_press;
-extern float dht1_temp;
-extern float dht1_hum;
+extern float light_int;
+extern float soil_hum;
 
 extern float pot1;
 extern float pot2;
@@ -65,9 +65,6 @@ extern byte weekDay;
 extern byte day;
 extern byte month;
 extern byte year;
-
-
-
 
 void analog_input_begin(){
 
@@ -122,8 +119,6 @@ void analog_input_begin(){
     } else {
         Serial.println("Didn't find AHT20");
     }  
-    
-
 }
 
 void read_analog(){
@@ -146,12 +141,28 @@ void read_analog(){
     Serial.println(v);
     pot2 = v;
     delay(100);
-    Serial.println(analogRead(PT_1));
-    Serial.println(analogRead(PT_2));
+    soma = 0;
+    delay(100);
+    for (int i = 0; i < 10; i++) {
+        soma += analogRead(SO_HUM);
+        delay (5);
+    }
+    v = soma/(10);
+    soil_hum = v;
+    soma = 0;
+    delay(100);
+    for (int i = 0; i < 10; i++) {
+        soma += analogRead(LI_IN);
+        delay (5);
+    }
+    v = soma/(10);
+    light_int = v;
+
+   
 }
 
 void read_analog_sensors(){
-     Serial.println("read analog sensors");
+    Serial.println("read analog sensors");
     
     bme1_temp = bme1.readTemperature();
     bme1_hum = bme1.readHumidity();
@@ -199,13 +210,11 @@ void printValues() {
     Serial.println(pot1);
     Serial.print("pot2: ");
     Serial.println(pot2);
-
-    Serial.print("Temperature DHT = ");
-    Serial.print(dht1_temp);
-    Serial.println(" °C");
-    Serial.print("Humidity = ");
-    Serial.print(dht1_hum);
-    Serial.println(" %");
+    Serial.print("soil humidity: ");
+    Serial.println(soil_hum);
+    Serial.print("light intensity: ");
+    Serial.println(light_int);
+    
 
 
     Serial.print("Temperature = ");
@@ -214,10 +223,6 @@ void printValues() {
     Serial.print("Pressure = ");
     Serial.print(bme1_press);
     Serial.println(" hPa");
-    // Serial.print("Approx. Altitude = ");
-    // Serial.print(bme1_);
-    // Serial.println(" m");
-
     Serial.print("Humidity = ");
     Serial.print(bme1_hum);
     Serial.println(" %");
@@ -227,23 +232,6 @@ void printValues() {
 
     
     Serial.println("========");
-
-    //  Serial.print("Temperature2 = ");
-    // Serial.print(bme2.readTemperature());
-    // Serial.println(" °C");
-
-    // Serial.print("Pressure = ");
-
-    // Serial.print(bme2.readPressure() / 100.0F);
-    // Serial.println(" hPa");
-
-    // Serial.print("Approx. Altitude = ");
-    // Serial.print(bme2.readAltitude(SEALEVELPRESSURE_HPA));
-    // Serial.println(" m");
-
-    // Serial.print("Humidity = ");
-    // Serial.print(bme2.readHumidity());
-    // Serial.println(" %");
 
     Serial.println("AHT");
 

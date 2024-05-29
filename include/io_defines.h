@@ -66,18 +66,24 @@ STM32F407VET6 - Grown
 //
 
 //Encoder 0
-#define ENC1_DT PE1
+#define ENC1_DT  PE1
 #define ENC1_CLK PE0
-#define BTE_1  PE3
+#define BTE_1    PE3
 
 //Encoder 1
-#define ENC2_DT PE2
+#define ENC2_DT  PE2
 #define ENC2_CLK PE5
-#define BTE_2  PE4
+#define BTE_2    PE4
 
 //Potentiometers
 #define PT_1  PC0
 #define PT_2  PC1
+
+//Soil Humidity
+#define SO_HUM PC2
+
+//Light Intensity
+#define LI_IN  PC3
 
 //DHT
 // #define DHT_1 PB7
