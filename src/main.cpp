@@ -113,6 +113,7 @@ void setup() {
    
   delay(4000); 
   analog_input_begin();
+  io_output_begin();
   rtc.getDate(&weekDay, &day, &month, &year);
   rtc.getTime(&hours, &minutes, &seconds, &subSec);
   read_analog();
@@ -124,10 +125,7 @@ void setup() {
   draw_page = 0;
   draw_page0();
   Serial.println("page0"); 
-  pinMode(LED1, OUTPUT);
-  pinMode(LED2, OUTPUT);
-  digitalWrite(LED1, HIGH);
-  digitalWrite(LED2, HIGH);
+  
 }
 
 void loop() {

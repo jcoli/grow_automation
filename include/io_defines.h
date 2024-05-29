@@ -95,5 +95,6 @@ STM32F407VET6 - Grown
 #define LED03   PF4
 #define LED04   PF5
 #define LED05   PF6
+#define LED06   PF7
 
 #endif
