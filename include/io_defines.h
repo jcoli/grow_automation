@@ -48,7 +48,7 @@ STM32F407VET6 - Grown
 //Switches
 #define SW_01   PE10
 #define SW_02   PE11
-#define SW_03   PE6
+#define SW_03   PE8
 #define SW_04   PE9
 
 //display buttons
@@ -65,7 +65,7 @@ STM32F407VET6 - Grown
 
 //
 
-//Encoder 1
+//Encoder 0
 #define ENC1_DT PE1
 #define ENC1_CLK PE0
 #define BTE_1  PE3
@@ -76,14 +76,17 @@ STM32F407VET6 - Grown
 #define BTE_2  PE4
 
 //Potentiometers
-#define PT_1  PC13
-#define PT_2  PE6
+#define PT_1  PC0
+#define PT_2  PC1
+
+//DHT
+// #define DHT_1 PB7
 
 //I2C
 #define SDA1    PB7
 #define SCL1    PB6
-#define SDA2    PC9
-#define SCL2    PA8 
+// #define SDA2    PC9
+// #define SCL2    PA8 
 
 //
 #define BUZZER_PIN PB0

@@ -12,6 +12,8 @@ STM32F407VET6 - Grown
 #include <Adafruit_AHTX0.h>
 #include "ScioSense_ENS160.h" 
 
+
+
 #include "io_defines.h"
 #include "defines.h"
 
@@ -23,11 +25,12 @@ ScioSense_ENS160      ens160(ENS160_I2CADDR_1);
 
 #define SEALEVELPRESSURE_HPA (1013)
 
-
 void read_analog();
 void analog_input_begin();
-void read_analog_begin();
+void read_analog_sensors();
+void read_analog();
 void printValues();
+
 
 extern float ens_aqi;
 extern float ens_tvoc;
@@ -40,6 +43,11 @@ extern float bme1_press;
 extern float bme2_temp;
 extern float bme2_hum;
 extern float bme2_press;
+extern float dht1_temp;
+extern float dht1_hum;
+
+extern float pot1;
+extern float pot2;
 
 extern const float beta;
 extern const float r0;
@@ -62,6 +70,7 @@ extern byte year;
 
 
 void analog_input_begin(){
+
     unsigned status1;
     unsigned status2;
     status1 = bme1.begin(0x77, &Wire);  
@@ -107,9 +116,6 @@ void analog_input_begin(){
         ens160.measure(true);
         ens160.measureRaw(true);
     }
-
-
-
     
     if (aht.begin()) {
         Serial.println("Found AHT20");
@@ -120,13 +126,32 @@ void analog_input_begin(){
 
 }
 
-void read_analog_begin(){
-   
+void read_analog(){
+    Serial.println("read analog");
+    float soma = 0;
+    for (int i = 0; i < 10; i++) {
+        soma += analogRead(PT_1);
+        delay (5);
+    }
+    float v = soma/(10);
+    Serial.println(v);
+    pot1 = v;
+    soma = 0;
+    delay(100);
+    for (int i = 0; i < 10; i++) {
+        soma += analogRead(PT_2);
+        delay (5);
+    }
+    v = soma/(10);
+    Serial.println(v);
+    pot2 = v;
+    delay(100);
+    Serial.println(analogRead(PT_1));
+    Serial.println(analogRead(PT_2));
 }
 
-void read_analog(){
-
-    // Serial.println("Read Analog");
+void read_analog_sensors(){
+     Serial.println("read analog sensors");
     
     bme1_temp = bme1.readTemperature();
     bme1_hum = bme1.readHumidity();
@@ -135,8 +160,6 @@ void read_analog(){
     // bme2_temp = bme2.readTemperature();
     // bme2_hum = bme2.readHumidity();
     // bme2_press = bme2.readPressure() / 100.0F;
-
-    // Serial.println("Read Analog1");
 
     sensors_event_t hum, temp;
     aht.getEvent(&hum, &temp);
@@ -161,22 +184,6 @@ void read_analog(){
     ens_aqi = ens160.getAQI();
     ens_tvoc = ens160.getTVOC();
     ens_eco2 = ens160.geteCO2();
-
-    // Serial.println("Read Analog4");
-
-    // Serial.print("AQI: ");Serial.print(ens160.getAQI());Serial.print("\t");
-    // Serial.print("TVOC: ");Serial.print(ens160.getTVOC());Serial.print("ppb\t");
-    // Serial.print("eCO2: ");Serial.print(ens160.geteCO2());Serial.println("ppm\t");
-
-
-
-    // HC05_SERIAL.print("AQI: ");HC05_SERIAL.print(ens160.getAQI());HC05_SERIAL.print("\t");
-    // HC05_SERIAL.print("TVOC: ");HC05_SERIAL.print(ens160.getTVOC());HC05_SERIAL.print("ppb\t");
-    // HC05_SERIAL.print("eCO2: ");HC05_SERIAL.print(ens160.geteCO2());HC05_SERIAL.println("ppm\t");
-
-    // HC05_SERIAL.println("4,1,0,0,#");
-    
-   
     
 }
 
@@ -187,6 +194,19 @@ void printValues() {
 
     HC05_SERIAL.printf("%02d/%02d/%02d ", day, month, year);
     HC05_SERIAL.printf("%02d:%02d\n", hours, minutes);
+
+    Serial.print("pot1: ");
+    Serial.println(pot1);
+    Serial.print("pot2: ");
+    Serial.println(pot2);
+
+    Serial.print("Temperature DHT = ");
+    Serial.print(dht1_temp);
+    Serial.println(" °C");
+    Serial.print("Humidity = ");
+    Serial.print(dht1_hum);
+    Serial.println(" %");
+
 
     Serial.print("Temperature = ");
     Serial.print(bme1_temp);
@@ -241,8 +261,6 @@ void printValues() {
 
     Serial.println("===================");
     Serial.println("===================");
-
-    
      
     HC05_SERIAL.println("2,1,1,"+String(aht_temp)+",#"); 
     HC05_SERIAL.println("2,1,2,"+String(aht_hum)+",#"); 
@@ -252,3 +270,5 @@ void printValues() {
     HC05_SERIAL.println("2,1,2,"+String(ens_eco2)+",#"); 
     
 }
+
+

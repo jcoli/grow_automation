@@ -114,9 +114,11 @@ void setup() {
   delay(4000); 
   analog_input_begin();
   io_output_begin();
+  Serial.println("page3"); 
   rtc.getDate(&weekDay, &day, &month, &year);
   rtc.getTime(&hours, &minutes, &seconds, &subSec);
   read_analog();
+  read_analog_sensors();
   VRef = readVref();
   intTemp = readTempSensor(VRef);
   tft_page = 0;
@@ -131,12 +133,14 @@ void setup() {
 void loop() {
 
   check_button();
+  
 
   if (HC05_SERIAL.available()){
     serialEvent3();
 
   }
   if (millis() - loopDelay > 60000){
+    read_analog();
     loopDelay = millis();
     rtc.getDate(&weekDay, &day, &month, &year);
     rtc.getTime(&hours, &minutes, &seconds, &subSec);
@@ -144,7 +148,7 @@ void loop() {
     // call_list_net();
     // delay(5000);
     // init_bt();
-    read_analog();
+    read_analog_sensors();
     // init_wifi();
     // WIFI_SERIAL.print("90,send,testwifi,4,#");
     // HC05_SERIAL.println("90,0,0,0,#");

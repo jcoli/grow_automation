@@ -32,6 +32,8 @@ static const char processor[] = "STM32F407VET6";
 #define WIFI_SERIAL Serial2
 #define HC05_SERIAL Serial3
 
+#define DHTTYPE DHT21  
+
 
 #define BROKER_ADDR  IPAddress(192,168,61,85)
 #define BROKER_USERNAME     "mqtt_user" 

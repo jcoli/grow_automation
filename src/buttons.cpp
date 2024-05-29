@@ -59,9 +59,10 @@ void buttons_begin(){
 }
 
 void checkPosition(){
-  Serial.println("checkPosition");
+  // Serial.println("checkPosition");
   encoder1.tick();
   encoder2.tick(); 
+  check_button();
 } 
 
 void check_button(){
@@ -72,21 +73,26 @@ void check_button(){
     enc2newPos = encoder2.getPosition(); 
 
     if (enc1newPos != enc1oldPos) {
+      Serial.println("enc0");
           if (enc1oldPos>enc1newPos){
             //  dec_ana();
+            Serial.println("enc0-dec");
           }   
           if (enc1oldPos<enc1newPos){
-            
+            Serial.println("enc0-inc");
           }
           enc1oldPos = enc1newPos;
     }
 
     if (enc2newPos != enc2oldPos) {
+      Serial.println("enc1");  
           if (enc2oldPos>enc2newPos){
             //  dec_ana();
+            Serial.println("enc1-dec");
           }   
           if (enc2oldPos<enc2newPos){
             // inc_ana();
+            Serial.println("enc1-inc");
           }
           enc2oldPos = enc2newPos;
     }
