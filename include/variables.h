@@ -137,10 +137,10 @@ float light_int = 0.00;
 float pot1 = 0;
 float pot2 = 0;
 
-int dutyCycle1 = 0;
-int dutyCycle2 = 0;
-int dutyCycle3 = 0;
-int dutyCycle4 = 0;
+int dutyCycle1 = 10;
+int dutyCycle2 = 20;
+int dutyCycle3 = 30;
+int dutyCycle4 = 40;
 
 
 

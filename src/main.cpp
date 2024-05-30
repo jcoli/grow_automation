@@ -42,7 +42,7 @@ STM32RTC& rtc = STM32RTC::getInstance();
 #define ADC_RANGE 4096
 
 
-HardwareSerial WIFI_SERIAL(PA3, PA2);
+HardwareSerial WIFI_SERIAL(PD6, PD5);
 HardwareSerial HC05_SERIAL(PC11, PC10); 
 
 static int32_t readVref();
@@ -151,7 +151,7 @@ void loop() {
     // init_bt();
     read_analog_sensors();
     // init_wifi();
-    // WIFI_SERIAL.print("90,send,testwifi,4,#");
+    WIFI_SERIAL.print("90,send,testwifi,4,#");
     // HC05_SERIAL.println("90,0,0,0,#");
     // HC05_SERIAL.print("AT+NAME");
     //  delay(2000);  

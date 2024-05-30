@@ -47,6 +47,7 @@ void init_wifi(){
 }
 
 void call_list_net(){
+    Serial.println("on_call_list");
     WIFI_SERIAL.print("1,0,0,0,#");
 }
 
