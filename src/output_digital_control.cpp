@@ -1,11 +1,10 @@
 /**
 Version: 0a
-Tecnocoli - 11/2023
+Tecnocoli - 04/2024
 jcoli - Jeferson Coli - jcoli@tecnocoli.com.br
-Pipicow - Clothes Dryer
+STM32F407VET6 - Grown
 **/
 #include <Arduino.h>
-#include <ArduinoHA.h> //MQTT
 
 #include "io_defines.h"
 #include "defines.h"
@@ -14,6 +13,8 @@ Pipicow - Clothes Dryer
 #include "input_digital_control.h"
 
 void io_output_begin();
+
+
 
 void io_output_begin(){
     pinMode(LED1, OUTPUT);
@@ -24,6 +25,8 @@ void io_output_begin(){
     pinMode(LED04, OUTPUT);
     pinMode(LED05, OUTPUT);
     pinMode(LED06, OUTPUT);
+
+    
 
     digitalWrite(LED1, HIGH);
     digitalWrite(LED2, HIGH);
@@ -52,6 +55,8 @@ void io_output_begin(){
     digitalWrite(LED05, LOW);
     delay(300);
     digitalWrite(LED06, LOW);
+
+
     
     
 

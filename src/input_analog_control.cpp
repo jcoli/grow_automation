@@ -185,7 +185,7 @@ void read_analog_sensors(){
 
     delay(1000);
 
-    ens160.set_envdata(bme1_temp, bme1_hum);
+    ens160.set_envdata(aht_temp, aht_hum);
 
     ens160.measure(true);
     ens160.measureRaw(true);

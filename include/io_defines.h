@@ -106,4 +106,10 @@ STM32F407VET6 - Grown
 #define LED05   PF6
 #define LED06   PF7
 
+//fan pwm
+#define FAN01   PG2
+#define FAN02   PG3
+#define FAN03   PG4
+#define FAN04   PG5
+
 #endif

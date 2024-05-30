@@ -20,6 +20,7 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 #include "input_digital_control.h"
 #include "mqtt_controll.h"
 #include "output_digital_control.h"
+#include "output_analog_control.h"
 #include "pitches.h"
 #include "sounds.h"
 #include "program.h"
@@ -95,10 +96,9 @@ void setup() {
     rtc.setYear(24);
   }
   analogReadResolution(12);
-  delay(5000);
   display_begin();
   drawSplash();
-  delay(1000);
+  delay(5000);
   
   init_bt();
   delay(500);
@@ -113,6 +113,7 @@ void setup() {
    
   delay(4000); 
   analog_input_begin();
+  ana_output_begin();
   io_output_begin();
   Serial.println("page3"); 
   rtc.getDate(&weekDay, &day, &month, &year);
