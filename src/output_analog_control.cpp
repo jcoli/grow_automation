@@ -81,7 +81,7 @@ void ana_output_begin(){
     HardwareTimer *Tim5 = new HardwareTimer(Instance);
     Tim5->setPWM(channel, FAN01, 10000, 50);
     Tim5->setPWM(channel1, FAN02, 10000, 30);
-    Tim5->setPWM(channel2, FAN03, 10000, 90);
+    Tim5->setPWM(channel2, FAN03, 10000, 30);
     Tim5->setPWM(channel3, FAN04, 10000, 10);
     Tim5->resume();
 

@@ -70,8 +70,8 @@ void analog_input_begin(){
 
     unsigned status1;
     unsigned status2;
-    status1 = bme1.begin(0x77, &Wire);  
-    status2 = bme2.begin(0x76, &Wire);  
+    status1 = bme1.begin(0x76, &Wire);  
+    status2 = bme2.begin(0x77, &Wire);  
     //The 7-bit device address is 111011x. The 6 MSB bits are fixed. The last bit is changeable by SDO value and can be changed during operation. 
     //Connecting SDO to GND results in slave address 1110110 (0x76); connection it to VDDIOresults in slaveaddress 1110111 (0x77)
     //The I²C interface uses the following pins:
