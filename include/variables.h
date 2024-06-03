@@ -59,6 +59,7 @@ String retMsg2[2] = {"", ""};
 String retMsg3[3] = {"", "", ""};
 String retMsg4[4] = {"", "", "", ""};
 String retMsg5[5] = {"", "", "", "", ""};
+String retMsg6[6] = {"", "", "", "", "", ""};
 
 unsigned long loopDelay = millis();
 unsigned long loopDelay_analog = millis();

@@ -14,6 +14,14 @@ STM32F407VET6 - Grown
 #define V12_MAX 14.5
 #define V24_MAX 28.0
 
+#define CALX_TEMP 25
+#define V25       760
+#define AVG_SLOPE 2500
+#define VREFINT   1210
+
+#define LL_ADC_RESOLUTION LL_ADC_RESOLUTION_12B
+#define ADC_RANGE 4096
+
 static const char version[] = "1.0a";
 static const char develop[] =  "jcoli-Tecnocoli";
 static const char email_develop[] = "jcoli@tecnocoli.com.br";
@@ -30,7 +38,7 @@ static const char processor[] = "STM32F407VET6";
 
 
 #define WIFI_SERIAL Serial2
-#define HC05_SERIAL Serial3
+// #define HC05_SERIAL Serial3
 
 #define DHTTYPE DHT21  
 

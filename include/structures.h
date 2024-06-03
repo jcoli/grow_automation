@@ -31,7 +31,7 @@ struct _out_ana
     String desc_esp;
 };
 
-#define MAX_OUT_ANA 2
+#define MAX_OUT_ANA 6
 
 
 

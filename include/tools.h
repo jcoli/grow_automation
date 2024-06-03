@@ -14,6 +14,7 @@ void split_msg_2(String msg);
 void split_msg_3(String msg);
 void split_msg_4(String msg);
 void split_msg_5(String msg);
+void split_msg_6(String msg);
 
 
 #endif

@@ -34,6 +34,7 @@ extern String retMsg2[2];
 extern String retMsg3[3];
 extern String retMsg4[4];
 extern String retMsg5[5];
+extern String retMsg6[6];
 
 extern String Ssid[2][10];
 extern String ssid_name;
@@ -56,8 +57,8 @@ void call_list_net(){
 }
 
 void on_wifi_comm(){
-    // Serial.println("on_wifi_comm");
-    // Serial.println(line1); 
+    Serial.print("on_wifi_comm: ");
+    Serial.println(line1); 
 
     split_msg_5(line1);
 

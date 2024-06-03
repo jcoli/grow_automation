@@ -18,7 +18,6 @@ STM32F407VET6 - Grown
 #include "pitches.h"
 #include "sounds.h"
 #include "program.h"
-#include "comm_bt.h" 
 #include "comm_wifi.h"
 
 void init_bt();
@@ -31,9 +30,7 @@ extern String retMsg2[2];
 extern String retMsg3[3];
 extern String retMsg4[4];
 extern String retMsg5[5];
-
-extern String Ssid[2][10];
-
+extern String retMsg6[6];
 
 extern int list_size;
 extern int ind_list_size;
@@ -42,8 +39,8 @@ extern int ind_list_size;
 
 void init_bt(){
     Serial.println("on_bt_init");
-    // HC05_SERIAL.println("AT");
-    HC05_SERIAL.println("2,0,0,0,#"); 
+    
+    
 
 }
 

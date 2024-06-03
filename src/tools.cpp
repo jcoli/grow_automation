@@ -17,11 +17,13 @@ void split_msg_2(String msg);
 void split_msg_3(String msg);
 void split_msg_4(String msg);
 void split_msg_5(String msg);
+void split_msg_6(String msg);
 
 extern String retMsg2[2];
 extern String retMsg3[3];
 extern String retMsg4[4];
 extern String retMsg5[5];
+extern String retMsg6[6];
 
 void split_msg_2(String msg){
     retMsg2[0] = "";
@@ -82,6 +84,24 @@ void split_msg_5(String msg){
     for(int i =0; i < msg.length(); i++){
        if(msg.charAt(i) == ','){
            retMsg5[p] = msg.substring(j, i);
+           j = i +1;
+           p++;
+       }
+    }  
+}
+
+void split_msg_6(String msg){
+    retMsg6[0] = "";
+    retMsg6[1] = "";
+    retMsg6[2] = "";
+    retMsg6[3] = "";
+    retMsg6[4] = "";
+    retMsg6[5] = "";
+    int j = 0;
+    int p = 0;
+    for(int i =0; i < msg.length(); i++){
+       if(msg.charAt(i) == ','){
+           retMsg6[p] = msg.substring(j, i);
            j = i +1;
            p++;
        }

@@ -203,8 +203,8 @@ void printValues() {
     Serial.printf("%02d/%02d/%02d ", day, month, year);
     Serial.printf("%02d:%02d\n", hours, minutes);
 
-    HC05_SERIAL.printf("%02d/%02d/%02d ", day, month, year);
-    HC05_SERIAL.printf("%02d:%02d\n", hours, minutes);
+    // HC05_SERIAL.printf("%02d/%02d/%02d ", day, month, year);
+    // HC05_SERIAL.printf("%02d:%02d\n", hours, minutes);
 
     Serial.print("pot1: ");
     Serial.println(pot1);
@@ -226,9 +226,9 @@ void printValues() {
     Serial.print("Humidity = ");
     Serial.print(bme1_hum);
     Serial.println(" %");
-    HC05_SERIAL.println("2,3,1,"+String(bme1_temp)+",#"); 
-    HC05_SERIAL.println("2,3,2,"+String(bme1_hum)+",#"); 
-    HC05_SERIAL.println("2,3,3,"+String(bme1_press)+",#"); 
+    // HC05_SERIAL.println("2,3,1,"+String(bme1_temp)+",#"); 
+    // HC05_SERIAL.println("2,3,2,"+String(bme1_hum)+",#"); 
+    // HC05_SERIAL.println("2,3,3,"+String(bme1_press)+",#"); 
 
     
     Serial.println("========");
@@ -250,12 +250,12 @@ void printValues() {
     Serial.println("===================");
     Serial.println("===================");
      
-    HC05_SERIAL.println("2,1,1,"+String(aht_temp)+",#"); 
-    HC05_SERIAL.println("2,1,2,"+String(aht_hum)+",#"); 
+    // HC05_SERIAL.println("2,1,1,"+String(aht_temp)+",#"); 
+    // HC05_SERIAL.println("2,1,2,"+String(aht_hum)+",#"); 
     
-    HC05_SERIAL.println("2,2,1,"+String(ens_aqi)+",#"); 
-    HC05_SERIAL.println("2,1,2,"+String(ens_tvoc)+",#"); 
-    HC05_SERIAL.println("2,1,2,"+String(ens_eco2)+",#"); 
+    // HC05_SERIAL.println("2,2,1,"+String(ens_aqi)+",#"); 
+    // HC05_SERIAL.println("2,1,2,"+String(ens_tvoc)+",#"); 
+    // HC05_SERIAL.println("2,1,2,"+String(ens_eco2)+",#"); 
     
 }
 

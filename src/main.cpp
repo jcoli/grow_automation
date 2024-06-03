@@ -24,7 +24,7 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 #include "pitches.h"
 #include "sounds.h"
 #include "program.h"
-#include "comm_bt.h"
+// #include "comm_bt.h"
 #include "comm_wifi.h"
 #include "buttons.h"
 #include "eprom.h"
@@ -33,23 +33,17 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 
 STM32RTC& rtc = STM32RTC::getInstance();
 
-#define CALX_TEMP 25
-#define V25       760
-#define AVG_SLOPE 2500
-#define VREFINT   1210
 
-#define LL_ADC_RESOLUTION LL_ADC_RESOLUTION_12B
-#define ADC_RANGE 4096
 
 
 HardwareSerial WIFI_SERIAL(PD6, PD5);
-HardwareSerial HC05_SERIAL(PC11, PC10); 
+// HardwareSerial HC05_SERIAL(PC11, PC10); 
 
 static int32_t readVref();
 static int32_t readTempSensor(int32_t VRef);
 void serialEvent();
 void serialEvent2();
-void serialEvent3();
+// void serialEvent3();
 void serialEventRun(void);
 
 
@@ -67,9 +61,9 @@ void serialEventRun(void)
     }
   // #endif
   // #if defined(HAVE_HWSERIAL3)  
-    if (serialEvent3 && HC05_SERIAL.available()) {
-      serialEvent3();
-    }
+    // if (serialEvent3 && HC05_SERIAL.available()) {
+    //   serialEvent3();
+    // }
   // #endif
 }
 
@@ -80,7 +74,7 @@ void setup() {
   
   Serial.begin(115200); //PC
   WIFI_SERIAL.begin(38400); //Sim
-  HC05_SERIAL.begin(38400); //Slave
+  // HC05_SERIAL.begin(38400); //Slave
   Serial.println("page0"); 
   rtc.setClockSource(STM32RTC::LSE_CLOCK);
   rtc.begin();
@@ -100,7 +94,7 @@ void setup() {
   drawSplash();
   delay(10000);
   
-  init_bt();
+  // init_bt();
   delay(500);
   init_wifi();
   delay(3000);
@@ -136,10 +130,10 @@ void loop() {
   check_button();
   
 
-  if (HC05_SERIAL.available()){
-    serialEvent3();
+  // if (HC05_SERIAL.available()){
+  //   serialEvent3();
 
-  }
+  // }
   if (millis() - loopDelay > 60000){
     read_analog();
     loopDelay = millis();
@@ -185,7 +179,7 @@ void serialEvent(){
       stringComplete = true;
       // on_loop();
       Serial.println(line);
-      HC05_SERIAL.print(line);
+      // HC05_SERIAL.print(line);
       
     }
     // Serial.println("SerialEvent + "+line);
@@ -225,27 +219,27 @@ void serialEvent2(){
   // Serial.println("SerialEvent2 + "+line1);
 }
 
-void serialEvent3(){
-  // Serial.print("serial 3: ");
-  while(HC05_SERIAL.available()){
-    // Serial.println("serial 3-1: ");
-    // Serial.println(line2);
-    char inChar = (char)HC05_SERIAL.read();
-    line2 += inChar;
-    // Serial.println(line2);
-    if (inChar == '#'){
-      string2Complete = true;
-    }
-    if (string2Complete){
-      // Serial.print("serial 3: ");
-      // Serial.println(line2);
-      on_bt_comm();
-      string2Complete = false;
-      line2 = "";
+// void serialEvent3(){
+//   // Serial.print("serial 3: ");
+//   while(HC05_SERIAL.available()){
+//     // Serial.println("serial 3-1: ");
+//     // Serial.println(line2);
+//     char inChar = (char)HC05_SERIAL.read();
+//     line2 += inChar;
+//     // Serial.println(line2);
+//     if (inChar == '#'){
+//       string2Complete = true;
+//     }
+//     if (string2Complete){
+//       // Serial.print("serial 3: ");
+//       // Serial.println(line2);
+//       on_bt_comm();
+//       string2Complete = false;
+//       line2 = "";
 
-    }
-  }
-}
+//     }
+//   }
+// }
 
 
 static int32_t readVref()
