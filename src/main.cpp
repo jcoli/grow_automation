@@ -98,7 +98,7 @@ void setup() {
   analogReadResolution(12);
   display_begin();
   drawSplash();
-  delay(5000);
+  delay(10000);
   
   init_bt();
   delay(500);
@@ -151,7 +151,7 @@ void loop() {
     // init_bt();
     read_analog_sensors();
     // init_wifi();
-    // WIFI_SERIAL.print("90,send,testwifi,4,#");
+    WIFI_SERIAL.print("90,send,testwifi,4,#");
     // HC05_SERIAL.println("90,0,0,0,#");
     // HC05_SERIAL.print("AT+NAME");
     //  delay(2000);  

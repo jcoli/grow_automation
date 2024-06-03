@@ -36,6 +36,8 @@ bool cooling = false;
 bool sleeping = false;
 
 String ipaddress;
+String ssid_name;
+String ssid_pwd;
 long rssi;
 bool led_out = false;
 bool door = false;

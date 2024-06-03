@@ -36,14 +36,18 @@ extern String retMsg4[4];
 extern String retMsg5[5];
 
 extern String Ssid[2][10];
-
+extern String ssid_name;
+extern String ssid_pwd;
 
 extern int list_size;
 extern int ind_list_size;
 
 void init_wifi(){
+    ssid_name="Area51";
+    ssid_pwd="shady6565";
     Serial.println("on_wifi_init");
-    WIFI_SERIAL.print("0,0,0,0,#");
+    WIFI_SERIAL.print("0,0,"+ssid_name+","+ssid_pwd+",#");
+
 }
 
 void call_list_net(){
