@@ -1,6 +1,6 @@
 /**
 Version: 0a
-Tecnocoli - 04/2024
+Tecnocoli - 06/2024
 jcoli - Jeferson Coli - jcoli@tecnocoli.com.br
 STM32F407VET6 - Grown
 **/
@@ -49,7 +49,7 @@ STM32F407VET6 - Grown
 #define WATER_PH 8
 #define SOIL_PH 9
 #define PPFD 10
-
+#define TEXT 11
 
 
 

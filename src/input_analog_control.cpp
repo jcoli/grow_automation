@@ -24,7 +24,7 @@ Adafruit_AHTX0 aht;
 // ScioSense_ENS160      ens160(ENS160_I2CADDR_0);
 ScioSense_ENS160      ens160(ENS160_I2CADDR_1);
 
-#define SEALEVELPRESSURE_HPA (1013)
+
 
 void read_analog();
 void analog_input_begin();
