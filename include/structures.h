@@ -1,8 +1,8 @@
 /**
 Version: 0a
-Tecnocoli - 10/2021
-jcoli - Jeferson Coli - jcoli@teccnocoli.com.br
-STM32F407VET6 - Digital ECU Simulator
+Tecnocoli - 04/2024
+jcoli - Jeferson Coli - jcoli@tecnocoli.com.br
+STM32F407VET6 - Grown
 **/
 
 #ifndef __STRUCTURES_H__
@@ -15,13 +15,15 @@ STM32F407VET6 - Digital ECU Simulator
 typedef struct _out_ana out_ana;
 struct _out_ana
 {
-    int addpot;
-    int cs_pin;
-    int val_pot;
+    int disp;
+    int subDisp;
+    int function;
+    int subFunction;
     float value;
-    float value_temp = 50;    
+    float oldvalue;
     bool chval;
-    bool internal = true;
+    int address;
+    int lenght;
     String descr;
     String type;
     String sensor;
@@ -31,21 +33,23 @@ struct _out_ana
     String desc_esp;
 };
 
-#define MAX_OUT_ANA 6
+#define MAX_OUT_ANA 10
 
 
 
 typedef struct _inp_dig inp_dig;
 struct _inp_dig
 {
-    int addinp;
-    String addinp_desc;
+    int disp;
+    int subDisp;
+    int function;
+    int subFunction;
     bool value;
     bool chval;
     bool oldvalue;
-    bool internal = true;
-    bool active_input;
     bool pullup_active;
+    int address;
+    int lenght;
     String pin_con;
     String descr;
     String type;
@@ -64,14 +68,15 @@ struct _inp_dig
 typedef struct _out_dig out_dig;
 struct _out_dig
 {
-    int addout;
-    String addout_desc;
+    int disp;
+    int subDisp;
+    int function;
+    int subFunction;
     bool value;
     bool chval;
     bool oldvalue;
-    bool internal = true;
-    String pin_con;
-    String cable;
+    int address;
+    int lenght;
     String descr;
     String type;
     String sensor;
@@ -86,12 +91,16 @@ struct _out_dig
 typedef struct _inp_ana inp_ana;
 struct _inp_ana
 {
-    int addinp;
-    String addinp_desc;
-    float value;
+    int disp;
+    int subDisp;
+    int function;
+    int subFunction;
+    String value1;
+    String value2;
+    float oldValue;
     bool chval;
-    bool internal = true;
-    String pin_con;
+    int address;
+    int lenght;
     String descr;
     String type;
     String sensor;
@@ -103,7 +112,29 @@ struct _inp_ana
     
 };
 
-#define MAX_INP_ANA 10
+#define MAX_INP_ANA 20
+
+typedef struct _credentials credentials ;
+struct _inp_ana
+{
+    int disp;
+    int subDisp;
+    int function;
+    int subFunction;
+    int address;
+    int lenght;
+    String value1;
+    String value2;
+    String descr;
+    String desc_por;
+    String desc_eng;
+    String desc_esp;
+    
+    
+};
+
+#define MAX_CREDENTIALS 10
+
 
 
 #endif

@@ -16,6 +16,7 @@ STM32F407VET6 - Grown
 
 #include "io_defines.h"
 #include "defines.h"
+#include "defines_protocol.h"
 
 Adafruit_BME280 bme1; 
 Adafruit_BME280 bme2; 

@@ -10,6 +10,7 @@ STM32F407VET6 - Grown
 #include "display.h"
 #include "defines.h"
 #include "io_defines.h"
+#include "defines_protocol.h"
 #include "tools.h"
 #include "input_analog_control.h"
 #include "input_digital_control.h"

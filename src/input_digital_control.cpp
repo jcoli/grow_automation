@@ -15,6 +15,7 @@ STM32F407VET6 - Grown
 #include "sounds.h"
 #include "program.h"
 #include "mqtt_controll.h"
+#include "defines_protocol.h"
 
 
 void io_input_begin();

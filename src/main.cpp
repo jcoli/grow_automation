@@ -13,6 +13,7 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 
 #include "display.h"
 #include "defines.h"
+#include "defines_protocol.h"
 #include "io_defines.h"
 #include "variables.h"
 #include "tools.h"

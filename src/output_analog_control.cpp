@@ -9,6 +9,7 @@ STM32F407VET6 - Grown
 #include "io_defines.h"
 #include "defines.h"
 #include "display.h"
+#include "defines_protocol.h"
 
 void ana_output_begin();
 
