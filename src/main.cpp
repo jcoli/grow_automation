@@ -93,13 +93,13 @@ void setup() {
   analogReadResolution(12);
   display_begin();
   drawSplash();
-  delay(10000);
+  delay(1000);
   
   // init_bt();
-  delay(500);
+  // delay(500);
   init_wifi();
   delay(3000);
-  call_list_net();
+  // call_list_net();
   delay(5000);
   buttons_begin();
   flash_begin();
@@ -115,7 +115,7 @@ void setup() {
   rtc.getTime(&hours, &minutes, &seconds, &subSec);
   read_analog();
   read_analog_sensors();
-  VRef = readVref();
+  VRef = readVref(); 
   intTemp = readTempSensor(VRef);
   tft_page = 0;
   ch_page = true;
@@ -146,11 +146,12 @@ void loop() {
     // init_bt();
     read_analog_sensors();
     // init_wifi();
-    WIFI_SERIAL.print("90,send,testwifi,4,#");
+    // WIFI_SERIAL.print("90,send,testwifi,4,#");
     // HC05_SERIAL.println("90,0,0,0,#");
     // HC05_SERIAL.print("AT+NAME");
     //  delay(2000);  
-    printValues();
+    // printValues();
+    mqtt_update();
     flashread_test6();
     VRef = readVref();
     intTemp = readTempSensor(VRef);

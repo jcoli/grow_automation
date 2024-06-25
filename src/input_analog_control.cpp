@@ -215,6 +215,7 @@ void printValues() {
     Serial.println(soil_hum);
     Serial.print("light intensity: ");
     Serial.println(light_int);
+
     
 
 
@@ -227,11 +228,9 @@ void printValues() {
     Serial.print("Humidity = ");
     Serial.print(bme1_hum);
     Serial.println(" %");
-    // HC05_SERIAL.println("2,3,1,"+String(bme1_temp)+",#"); 
-    // HC05_SERIAL.println("2,3,2,"+String(bme1_hum)+",#"); 
-    // HC05_SERIAL.println("2,3,3,"+String(bme1_press)+",#"); 
-
     
+    
+
     Serial.println("========");
 
     Serial.println("AHT");
@@ -240,6 +239,7 @@ void printValues() {
     Serial.println(aht_temp); 
     Serial.print("Humidity: "); 
     Serial.println(aht_hum); 
+    
 
     Serial.print("AQI: ");
     Serial.println(ens_aqi);
@@ -247,6 +247,9 @@ void printValues() {
     Serial.println(ens_tvoc);
     Serial.print("eCO2: ");
     Serial.println(ens_eco2);
+    WIFI_SERIAL.print("3,4,ens_eco2,"+String(ens_eco2)+",#"); 
+    
+
 
     Serial.println("===================");
     Serial.println("===================");

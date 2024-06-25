@@ -45,7 +45,7 @@ extern int list_size;
 extern int ind_list_size;
 
 void init_wifi(){
-    ssid_name="Area51";
+    ssid_name="IOT-2";
     ssid_pwd="shady6565";
     Serial.println("on_wifi_init");
     WIFI_SERIAL.print("0,0,"+ssid_name+","+ssid_pwd+",#");

@@ -158,15 +158,15 @@ void draw_page0(){
         tft.setCursor(5,180);
         tft.print("Soil:");
 
-        tft.setCursor(230,100);
+        tft.setCursor(250,100);
         tft.print("Hum bme1:");
-        tft.setCursor(230,120);
+        tft.setCursor(250,120);
         tft.print("Hum bme2:");
-        tft.setCursor(230,140);
+        tft.setCursor(250,140);
         tft.print("Hum aht:");
-        tft.setCursor(230,160);
+        tft.setCursor(250,160);
         tft.print("TVOC:");
-        tft.setCursor(230,180);
+        tft.setCursor(250,180);
         tft.print("Light:");
 
         tft.setTextColor(TFT_RED); 
@@ -194,18 +194,18 @@ void draw_page0(){
         tft.print(aht_temp,2);
         tft.setCursor(120,160);
         tft.print(ens_eco2,2);
-        tft.setCursor(120,180);
+        tft.setCursor(110,180);
         tft.print(soil_hum,2);
 
-        tft.setCursor(355,100);
+        tft.setCursor(385,100);
         tft.print(bme1_hum,2);
-        tft.setCursor(365,120);
+        tft.setCursor(395,120);
         tft.print(bme2_hum,2);
-        tft.setCursor(355,140);
+        tft.setCursor(385,140);
         tft.print(aht_hum,2);
-        tft.setCursor(355,160);
+        tft.setCursor(375,160);
         tft.print(ens_tvoc,2);
-        tft.setCursor(355,180);
+        tft.setCursor(375,180);
         tft.print(light_int,2);
         
         inj_en = true;
