@@ -113,10 +113,12 @@ void analog_input_begin(){
         Serial.println(ens160.setMode(ENS160_OPMODE_STD) ? "done." : "failed!");
         ens160.measure(true);
         ens160.measureRaw(true);
+        
     }
     
     if (aht.begin()) {
         Serial.println("Found AHT20");
+        Serial.println(aht.getStatus());
     } else {
         Serial.println("Didn't find AHT20");
     }  
@@ -156,7 +158,7 @@ void read_analog(){
         soma += analogRead(LI_IN);
         delay (5);
     }
-    v = soma/(10);
+    v = soma/(10); 
     light_int = v;
 
    
@@ -240,7 +242,6 @@ void printValues() {
     Serial.print("Humidity: "); 
     Serial.println(aht_hum); 
     
-
     Serial.print("AQI: ");
     Serial.println(ens_aqi);
     Serial.print("TVOC: ");

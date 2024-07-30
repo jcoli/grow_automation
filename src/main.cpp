@@ -16,7 +16,7 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 #include "defines_protocol.h"
 #include "io_defines.h"
 #include "variables.h"
-#include "tools.h"
+#include "tools.h" 
 #include "input_analog_control.h"
 #include "input_digital_control.h"
 #include "mqtt_controll.h"
@@ -150,7 +150,7 @@ void loop() {
     // HC05_SERIAL.println("90,0,0,0,#");
     // HC05_SERIAL.print("AT+NAME");
     //  delay(2000);  
-    // printValues();
+    printValues();
     mqtt_update();
     flashread_test6();
     VRef = readVref();
