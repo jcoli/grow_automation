@@ -53,16 +53,36 @@ void mqtt_loop(){
 }
 
 void mqtt_update(){
-    WIFI_SERIAL.print("3,7,soil_hum,"+String(soil_hum)+",#"); 
-    WIFI_SERIAL.print("3,11,light_int,"+String(light_int)+",#"); 
-    WIFI_SERIAL.print("3,1,bme1_temp,"+String(bme1_temp)+",#"); 
-    WIFI_SERIAL.print("3,2,bme1_hum,"+String(bme1_hum)+",#"); 
-    WIFI_SERIAL.print("3,3,bme1_press,"+String(bme1_press)+",#"); 
-    WIFI_SERIAL.print("3,1,aht_temp,"+String(aht_temp)+",#"); 
-    WIFI_SERIAL.print("3,2,aht_hum,"+String(aht_hum)+",#"); 
-    WIFI_SERIAL.print("3,4,ens_eco2,"+String(ens_eco2)+",#");
-    WIFI_SERIAL.print("3,4,ens_tvoc,"+String(ens_tvoc)+",#");
-    WIFI_SERIAL.print("3,4,ens_aqi,"+String(ens_aqi)+",#"); 
+    // WIFI_SERIAL.print("3,7,soil_hum,"+String(soil_hum)+",#"); 
+    // WIFI_SERIAL.print("3,11,light_int,"+String(light_int)+",#"); 
+    // WIFI_SERIAL.print("3,1,bme1_temp,"+String(bme1_temp)+",#"); 
+    // WIFI_SERIAL.print("3,2,bme1_hum,"+String(bme1_hum)+",#"); 
+    // WIFI_SERIAL.print("3,3,bme1_press,"+String(bme1_press)+",#"); 
+    // WIFI_SERIAL.print("3,1,aht_temp,"+String(aht_temp)+",#"); 
+    // WIFI_SERIAL.print("3,2,aht_hum,"+String(aht_hum)+",#"); 
+    // WIFI_SERIAL.print("3,4,ens_eco2,"+String(ens_eco2)+",#");
+    // WIFI_SERIAL.print("3,4,ens_tvoc,"+String(ens_tvoc)+",#");
+    // WIFI_SERIAL.print("3,4,ens_aqi,"+String(ens_aqi)+",#"); 
+
+    WIFI_SERIAL.print("3,7,soil_hum,8.8,#"); 
+
+    WIFI_SERIAL.print("3,11,light_int,120,#"); 
+
+    WIFI_SERIAL.print("3,1,bme1_temp,35,#"); 
+
+    WIFI_SERIAL.print("3,2,bme1_hum,32.8,#"); 
+
+    WIFI_SERIAL.print("3,3,bme1_press,1028,5,#"); 
+
+    WIFI_SERIAL.print("3,1,aht_temp,45,#"); 
+
+    WIFI_SERIAL.print("3,2,aht_hum,55,#"); 
+
+    WIFI_SERIAL.print("3,4,ens_eco2,400,#");
+
+    WIFI_SERIAL.print("3,4,ens_tvoc,5,#");
+
+    WIFI_SERIAL.print("3,4,ens_aqi,40,#"); 
    
 }
 

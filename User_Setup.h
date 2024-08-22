@@ -50,7 +50,7 @@
 //#define TFT_MISO PB14
 //#define TFT_SCLK PB13
 //
- #define TFT_CS   PD8 // Nucleo-F767ZI equivalent of D5
+ #define TFT_CS   PD8 // Nucleo-F767ZI equivalent of D5 
  #define TFT_DC   PA4  // Nucleo-F767ZI equivalent of D6
  #define TFT_RST  PD10 // Nucleo-F767ZI equivalent of D7
 

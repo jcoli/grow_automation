@@ -10,12 +10,25 @@ STM32F407VET6 - Grown
 
 // TFT Display
 // #define TFT_SPI_PORT 2 
-// #define TFT_MOSI PB15
+// #define TFT_MOSI PB15 
 // #define TFT_MISO PB14
 // #define TFT_SCLK PB13
 // #define TFT_CS   PB12 
 // #define TFT_DC   PC5  
 // #define TFT_RST  PB11 
+
+// #define TFT_BL   PD8        // LED back-light control pin
+// #define TFT_BACKLIGHT_ON HIGH  // Level to turn ON back-light (HIGH or LOW)
+
+// #define TFT_SPI_PORT 2 // SPI port 2 maximum clock rate is 27MHz
+// #define TFT_MOSI PB15
+// #define TFT_MISO PC2
+// #define TFT_SCLK PB13
+
+// #define TFT_CS   PB12 // Nucleo-F767ZI equivalent of D5
+// #define TFT_DC   PD10  // Nucleo-F767ZI equivalent of D6
+// #define TFT_RST  PD9 // Nucleo-F767ZI equivalent of D7
+
 
 //EPROM WINBOND W25Q16BV
 // #define EP_CS   PA15
@@ -111,5 +124,12 @@ STM32F407VET6 - Grown
 #define FAN02   PA1
 #define FAN03   PA2
 #define FAN04   PA3
+
+// //LED PWM
+// #define LED01   PA3
+// #define LED01   PA3
+// #define LED01   PA3
+// #define LED01   PA3
+
 
 #endif

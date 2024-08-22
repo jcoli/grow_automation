@@ -10,6 +10,7 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 #include <SPI.h>
 #include <TFT_eSPI.h>
 #include <STM32RTC.h>
+#include <HardwareTimer.h>
 
 #include "display.h"
 #include "defines.h"
@@ -29,7 +30,7 @@ STM32F407VET6 - Grow Controller, Analysys and Monitoring
 #include "comm_wifi.h"
 #include "buttons.h"
 #include "eprom.h"
-
+#include "can_control.h"
 #include "disp_page0.h"
 
 STM32RTC& rtc = STM32RTC::getInstance();
@@ -71,6 +72,9 @@ void serialEventRun(void)
 
 // char version[8] = "1.0a";
 
+HardwareTimer *tim2 = new HardwareTimer(TIM2);
+HardwareTimer *tim3 = new HardwareTimer(TIM3);
+
 void setup() {
   
   Serial.begin(115200); //PC
@@ -94,9 +98,12 @@ void setup() {
   display_begin();
   drawSplash();
   delay(1000);
+
+  can_begin();
   
   // init_bt();
   // delay(500);
+  
   init_wifi();
   delay(3000);
   // call_list_net();
@@ -107,16 +114,16 @@ void setup() {
   flashread_test6();
    
   delay(4000); 
-  analog_input_begin();
-  ana_output_begin();
-  io_output_begin();
+  // analog_input_begin();
+  // ana_output_begin();
+  // io_output_begin();
   Serial.println("page3"); 
   rtc.getDate(&weekDay, &day, &month, &year);
   rtc.getTime(&hours, &minutes, &seconds, &subSec);
-  read_analog();
-  read_analog_sensors();
-  VRef = readVref(); 
-  intTemp = readTempSensor(VRef);
+  // read_analog();
+  // read_analog_sensors();
+  // VRef = readVref(); 
+  // intTemp = readTempSensor(VRef);
   tft_page = 0;
   ch_page = true;
   draw_tab = 0;

@@ -51,9 +51,17 @@ static const char processor[] = "STM32F407VET6";
 #define LOCAL_IP IPAddress(192,168,61,115)
 #define GATEWAY IPAddress(192, 168, 61, 1)
 #define SUBNET IPAddress(255, 255, 255, 0)
-#define LOCAL_SSID "Area51"
+#define LOCAL_SSID "IOT-2"
 #define LOCAL_PASS "shady6565"
 
 #define NUM_BUTTONS 17
+
+#define channel_red
+#define channel_blue
+#define channel_grenn
+#define channel_white_warn
+#define channel_white_cold
+#define channel_uv
+#define channel_ir
 
 #endif

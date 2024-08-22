@@ -44,9 +44,11 @@ extern String ssid_pwd;
 extern int list_size;
 extern int ind_list_size;
 
+
+
 void init_wifi(){
-    ssid_name="IOT-2";
-    ssid_pwd="shady6565";
+    ssid_name=LOCAL_SSID;
+    ssid_pwd=LOCAL_PASS;
     Serial.println("on_wifi_init");
     WIFI_SERIAL.print("0,0,"+ssid_name+","+ssid_pwd+",#");
 
