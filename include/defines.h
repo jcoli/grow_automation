@@ -54,6 +54,8 @@ static const char processor[] = "STM32F407VET6";
 #define LOCAL_SSID "IOT-2"
 #define LOCAL_PASS "shady6565"
 
+#define CANID 0xAA;
+
 #define NUM_BUTTONS 17
 
 #define channel_red

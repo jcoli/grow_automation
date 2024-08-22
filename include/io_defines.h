@@ -107,6 +107,8 @@ STM32F407VET6 - Grown
 // #define SDA2    PC9
 // #define SCL2    PA8 
 
+#define CAN0_INT PA9
+
 //
 #define BUZZER_PIN PB0
 #define LED1    PF9
